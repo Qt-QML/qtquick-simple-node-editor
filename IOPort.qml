@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 Item {
     id: root
+    property alias rect: rect
     property real size: 15
     property real globalX: x + parent.x
     property real globalY: y + parent.y

@@ -5,14 +5,11 @@ Rectangle {
     border.color: "black"
     border.width: 2
     color: "#eee"
-    property QtObject tracker
+    property QtObject maxZTracker
 
     MouseArea {
         anchors.fill: parent
         drag.target: rect
-        onPressed: {
-            console.log("pressed", rect.parent)
-            rect.z = tracker.maxZ++
-        }
+        onPressed: rect.z = maxZTracker.maxZ++
     }
 }

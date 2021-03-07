@@ -4,5 +4,7 @@
         <file>Node.qml</file>
         <file>IOPort.qml</file>
         <file>Connection.qml</file>
+        <file>InputPort.qml</file>
+        <file>OutputPort.qml</file>
     </qresource>
 </RCC>
