@@ -7,7 +7,7 @@ Shape {
     property IOPort to
     x: Math.min(from.globalX, to.globalX)
     y: Math.min(from.globalY, to.globalY)
-    z: Math.max(from.globalZ, to.globalZ) + 0.5
+    z: -1//Math.max(from.globalZ, to.globalZ) + 0.5
     width: Math.abs(from.globalX - to.globalX)
     height: Math.abs(from.globalY - to.globalY)
     property point start: from.globalX, from.globalY, to.globalX, to.globalY, mapFromItem(from, 0, 0)
