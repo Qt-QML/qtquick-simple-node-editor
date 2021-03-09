@@ -18,7 +18,6 @@ IOPort {
 
     Item {
         id: connectionMakerDummy
-        objectName: "connectionMakerDummy"
         Drag.active: mouseArea.drag.active
         property alias sourcePort: root
 

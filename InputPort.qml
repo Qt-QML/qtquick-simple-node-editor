@@ -1,19 +1,13 @@
 import QtQuick 2.0
+import QtQuick.Window 2.15
 
 IOPort {
     id: root
 
-    Component {
-        id: newConnection
-        Connection {}
-    }
-
     DropArea {
         id: dropArea
         anchors.fill: root.rect
-        onDropped: {
-            newConnection.createObject(root.parent.parent, {from: drop.source.sourcePort, to: root})
-        }
+        onDropped: view.newConnection(drop.source.sourcePort, root)
     }
 
     Rectangle {

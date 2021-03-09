@@ -3,6 +3,7 @@ import QtQuick.Shapes 1.15
 
 Shape {
     id: root
+    property Item view: root.parent
     property IOPort from
     property IOPort to
     x: Math.min(from.globalX, to.globalX)
@@ -38,14 +39,15 @@ Shape {
             y: -height/2
             width: rm.size
             height: rm.size
-            color: rmma.containsMouse ? "red" : "transparent"
+            color: "red"
+            visible: rmma.containsMouse
+        }
 
-            MouseArea {
-                id: rmma
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: root.destroy()
-            }
+        MouseArea {
+            id: rmma
+            anchors.fill: rect
+            hoverEnabled: true
+            onClicked: root.destroy()
         }
     }
 }

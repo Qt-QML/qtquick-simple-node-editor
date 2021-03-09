@@ -8,6 +8,9 @@ Item {
     property real globalY: y + parent.y
     property real globalZ: 1 + parent.z
 
+    property Node node: root.parent
+    property Item view: root.node.view
+
     Rectangle {
         id: rect
         x: -width/2
